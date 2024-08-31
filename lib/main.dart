@@ -1,10 +1,17 @@
+import 'package:animator/detail.dart';
 import 'package:animator/home.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:animator/splash.dart';
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(MyApp());
+  runApp(
+    MyApp(),
+  );
 }
+
+
+
+
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
@@ -17,9 +24,11 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: "home",
+      initialRoute: "/",
       routes: {
-        "home":(context) => Homepage(),
+        "/":(context)=>SplashPage(),
+        "home":(context)=>HomePage(),
+        "detail":(context)=>DetailPage(),
       },
     );
   }
